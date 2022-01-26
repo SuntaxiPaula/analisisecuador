@@ -29,7 +29,8 @@ income20= (df['TOTAL_INGRESOS__6999'] < 1000000) & (df['CIIU'].str.contains('C10
 #income_20= (df['TOTAL_INGRESOS__6999'] > 5000000) 
 #& (df['CIIU'].str.contains('C10')) 
 
-
+#Los nombres que estan en las llaves, son todos las cuentas que necesito para realizar un estado financiero o sea son cuentas de mayores
+#Van en orden de Balance general a Estado P y G
 pequenas2020 = df.loc[income20, ['NOMBRE','CIIU','TOTAL_INGRESOS__6999','TOTAL_ACTIVO_CORRIENTE_361', 'CDB_CLI_REL_LOCALES_312',
                  'CDB_CLI_REL_EXTERIOR_313', 'DET_CTAS_COB_INC__314', 'CDB_CLI_NRE_LOCALES_315',
                  'CDB_CLI_NRE_EXTERIOR_316', 'INVENTARIO_MATERIA_PRIMA_340', 'INV_PRODUCTOS_PROCESO_341',
